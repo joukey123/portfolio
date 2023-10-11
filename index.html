@@ -20,7 +20,9 @@
           </div>
           <div id="mode">
             <!-- 토글버튼으로 제작 -->
-            <div class="mode__border"><div class="mode__circle"></div></div>
+            <div id="darkmode" class="mode__border">
+              <div class="mode__circle"></div>
+            </div>
           </div>
           <div id="nav">
             <ul>
@@ -39,8 +41,24 @@
             <h1>정민우입니다.</h1>
             <div class="home__text-link">
               <a href="" target="_blank"><i class="fa-brands fa-github"></i></a>
-              <a href="" download=""
-                >이력서 & 자기소개서 다운로드 <span>↓</span></a
+              <div class="resum__download">
+                <a href="" download="">이력서 & 자기소개서 다운로드 </a>
+                <span class="download__btn">↓</span>
+              </div>
+            </div>
+            <div id="adress">
+              <span>Contact</span>
+              <span> | </span>
+              <a href="tel:01056243362"
+                ><span
+                  ><i class="fa-solid fa-mobile"></i> 010-5624-3362
+                </span></a
+              >
+              <a href="mailto:holland.mwj@gmail.com"
+                ><span
+                  ><i class="fa-solid fa-envelope"></i>
+                  holland.mwj@gmail.com</span
+                ></a
               >
             </div>
           </div>
@@ -63,15 +81,40 @@
             </p>
             <div class="about__text-skill">
               <h3>Language</h3>
-              <h4>javascript</h4>
+              <div class="skill__component">
+                <img class="skillicon" src="./src/img/icon/js.png" />
+                <h4>javascript</h4>
+              </div>
               <h3>Framework / Library</h3>
-              <h4>React, JQuery</h4>
+              <div class="skill__component">
+                <img class="skillicon" src="./src/img/icon/react.png" />
+                <h4>React</h4>
+                <img class="skillicon" src="./src/img/icon/jquery.png" />
+                <h4>JQuery</h4>
+              </div>
               <h3>MarkUp</h3>
-              <h4>HTML, CSS, SCSS</h4>
+              <div class="skill__component">
+                <img class="skillicon" src="./src/img/icon/html.png" />
+                <h4>HTML</h4>
+                <img class="skillicon" src="./src/img/icon/css.png" />
+                <h4>CSS</h4>
+                <img class="skillicon" src="./src/img/icon/scss.png" />
+                <h4>SCSS</h4>
+              </div>
               <h3>Tool</h3>
-              <h4>Github</h4>
+              <div class="skill__component">
+                <img class="skillicon" src="./src/img/icon/git.png" />
+                <h4>Github</h4>
+              </div>
               <h3>Design</h3>
-              <h4>Figma, Photoshop, Illustrator</h4>
+              <div class="skill__component">
+                <img class="skillicon" src="./src/img/icon/figma.png" />
+                <h4>Figma</h4>
+                <img class="skillicon" src="./src/img/icon/ps.png" />
+                <h4>Photoshop</h4>
+                <img class="skillicon" src="./src/img/icon/ai.png" />
+                <h4>Illustrator</h4>
+              </div>
             </div>
           </div>
           <div class="about__keywords">
@@ -167,7 +210,7 @@
             <div class="projects__contents-box">
               <div class="projects__contents-img">
                 <img
-                  src="https://images.unsplash.com/photo-1637611971493-4074b84e7231?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3024&q=80"
+                  src="https://images.unsplash.com/photo-1589737172794-8bc7dab0ac22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3174&q=80"
                 />
               </div>
               <div class="projects__contents-text">
@@ -237,10 +280,10 @@
       </main>
 
       <footer>
-        <p>
+        <h5>
           Copyright &copy; <span id="Currentyear">2023</span>
           <span>All rights reserved</span>
-        </p>
+        </h5>
       </footer>
     </div>
     <script src="app.js"></script>
