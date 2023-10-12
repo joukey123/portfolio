@@ -7,9 +7,6 @@
 @import "./css/screen/projects.css";
 
 body {
-  font-family: "Noto Sans KR", sans-serif;
-  color: var(--font-color);
-  scroll-behavior: smooth;
 }
 p,
 h3,
