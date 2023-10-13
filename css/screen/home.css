@@ -53,9 +53,14 @@ a[download] {
   width: 60%;
   padding: 0 5px;
 }
+
 #adress span:nth-child(3) i,
 #adress span:last-child i {
   margin-right: 3px;
+}
+
+#adress a > span > i {
+  color: var(--subPoint-color);
 }
 @keyframes downloadMove {
   0% {

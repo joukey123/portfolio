@@ -22,8 +22,8 @@ h4 {
 
 header {
   top: 0;
-  width: 100%;
   z-index: 1;
+  width: 100%;
 }
 /* 스크롤 전에는 일반메뉴
 스크롤하면 상단고정, 그림자 생성  */
@@ -41,12 +41,20 @@ header {
   font-size: 18px;
   padding: 2rem 7rem;
 }
-
+#headerMenu__rows {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 #logo {
   width: 45%;
   padding: 5px;
   font-weight: bold;
   font-size: 30px;
+}
+#logo:hover {
+  color: var(--mainPoint-color);
 }
 #mode {
   width: 60px;
@@ -54,7 +62,12 @@ header {
   display: flex;
   justify-content: end;
   order: 3;
+  position: absolute;
+  top: 55px;
+  right: 1%;
+  transform: translate(-50%, -50%);
 }
+
 .mode__border {
   width: 60px;
   height: 30px;
@@ -82,22 +95,34 @@ header {
     right: 2.5px;
   }
 }
-
+#menubar {
+  font-size: 30px;
+  padding: 5px;
+}
+#menubar:hover {
+  color: var(--mainPoint-color);
+}
 #nav {
-  width: 40%;
+  width: 100%;
 }
 #nav ul {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
+#nav ul li {
+  width: 100%;
+}
 #nav ul li a {
-  display: inline-block;
-  width: 90px;
+  display: block;
+  width: 100%;
   padding: 5px;
   text-align: center;
-  margin-left: 0.7rem;
+  margin: 0 1rem;
   font-weight: bold;
+}
+#nav ul li a:hover {
+  color: var(--mainPoint-color);
 }
 
 footer {
@@ -113,4 +138,25 @@ footer {
 
 footer span:last-child {
   font-weight: lighter;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes active {
+  0% {
+    height: 106px;
+  }
+  100% {
+    height: 180px;
+  }
+}
+@keyframes inactive {
+  0% {
+    height: 180px;
+  }
+  100% {
+    height: 106px;
+  }
 }

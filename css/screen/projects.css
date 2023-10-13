@@ -45,7 +45,7 @@
   cursor: pointer;
 }
 .projects__contents-img img {
-  width: 100%;
+  max-width: 100%;
   object-fit: cover;
 }
 .projects__contents-text {
@@ -63,7 +63,7 @@
 }
 .projects__contents-text p {
   font-size: 16px;
-  line-height: 2rem;
+  line-height: 1.5rem;
   font-weight: lighter;
 }
 
@@ -77,13 +77,14 @@
   padding: 0.8rem;
   color: var(--white);
   font-size: 15px;
+  border-radius: 5px;
 }
 .project-skill ul li:first-child {
-  background-color: var(--subPoint-color);
+  background-color: var(--js-color);
 }
 
 .project-skill ul li:last-child {
-  background-color: var(--mainPoint-color);
+  background-color: var(--css-color);
 }
 .project-link {
   display: flex;

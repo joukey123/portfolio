@@ -1,10 +1,20 @@
 const darkmodeBtn = document.getElementById("darkmode");
 const projectImges = document.getElementsByClassName("projects__contents-img");
 const keywords = document.querySelectorAll(".about__keywords span");
+const imgboxs = document.querySelector(".projects__contents-img");
+const menubar = document.getElementById("menubar");
 const canvas = document.getElementById("keywordCanvas");
 const ctx = canvas.getContext("2d");
+const header = document.querySelector("header");
+const nav = document.getElementById("nav");
+const mediaQueryList = matchMedia("screen and (max-width:1000px)");
+const adress = document.getElementById("adress");
+const contact = adress.querySelector("span:first-child");
+const links = adress.querySelectorAll("a");
 
 let isDarkmode = false;
+let isMenuClick = true;
+let isContactClick = true;
 let prevRandom;
 
 const scaleKeywords = () => {
@@ -45,7 +55,7 @@ for (let keyword of keywords) {
   keyword.addEventListener("mouseleave", () => {
     clearInterval(intervalID);
     keyword.classList.remove("mouseoverKeyword");
-    intervalID = setInterval(scaleKeywords, 1500);
+    handleOnKeywords();
   });
 }
 const drawColor = () => {
@@ -151,7 +161,6 @@ const drawLine = () => {
 };
 
 const handelHeader = () => {
-  const header = document.querySelector("header");
   const scrollY = window.scrollY;
   if (scrollY > 0) {
     header.classList.add("scrolled");
@@ -170,11 +179,11 @@ const handleDarkMode = () => {
   }
   drawColor();
 };
-
 for (let projectImg of projectImges) {
   const img = projectImg.querySelector("img");
-  const imgHeight = img.height;
   img.addEventListener("mouseover", () => {
+    const imgHeight = img.height;
+
     img.style.transition = `transform 8s`;
     img.style.transform = `translateY(${-imgHeight + 400}px)`;
   });
@@ -183,9 +192,60 @@ for (let projectImg of projectImges) {
     img.style.transform = `translateY(0)`;
   });
 }
+const handleMenu = () => {
+  if (isMenuClick) {
+    header.style.animation = "active .3s linear forwards";
+    setTimeout(() => {
+      nav.style.display = "flex";
+      nav.style.marginTop = "40px";
+      isMenuClick = !isMenuClick;
+    }, 300);
+  } else {
+    header.style.animation = "inactive .3s linear forwards";
+    nav.style.display = "none";
+    isMenuClick = !isMenuClick;
+  }
+};
 
+const handleWindowResize = () => {
+  isMenuClick = true; //클릭 초기화
+  if (mediaQueryList.matches) {
+    nav.style.marginTop = "0px";
+    nav.style = "";
+    header.style.animation = "";
+    contact.classList.add("bounce");
+    for (let link of links) {
+      link.classList.add("hidden");
+    }
+  } else {
+    contact.classList.remove("bounce");
+    for (let link of links) {
+      link.classList.remove("hidden");
+    }
+  }
+};
+
+const handleContact = () => {
+  if (isContactClick) {
+    for (let link of links) {
+      link.classList.remove("hidden");
+    }
+    contact.classList.remove("bounce");
+    isContactClick = !isContactClick;
+  } else {
+    for (let link of links) {
+      link.classList.add("hidden");
+    }
+    contact.classList.add("bounce");
+    isContactClick = !isContactClick;
+  }
+};
 drawColor();
 scaleKeywords();
+handleWindowResize();
 
+contact.addEventListener("click", handleContact);
+menubar.addEventListener("click", handleMenu);
 window.addEventListener("scroll", handelHeader);
 darkmodeBtn.addEventListener("click", handleDarkMode);
+window.addEventListener("resize", handleWindowResize);

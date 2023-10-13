@@ -15,21 +15,28 @@
     <div id="container">
       <header>
         <div id="headerMenu">
-          <div id="logo">
-            <a href="#top"><h1>MP</h1></a>
+          <div id="headerMenu__rows">
+            <div id="logo">
+              <a href="#top"><h1>MP</h1></a>
+            </div>
+            <div id="menubar" class="hidden">
+              <i class="fa-solid fa-bars"> </i>
+            </div>
+          </div>
+          <div id="headerMenu__rows">
+            <div id="nav">
+              <ul>
+                <li><a href="#top">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Project</a></li>
+              </ul>
+            </div>
           </div>
           <div id="mode">
             <!-- 토글버튼으로 제작 -->
             <div id="darkmode" class="mode__border">
               <div class="mode__circle"></div>
             </div>
-          </div>
-          <div id="nav">
-            <ul>
-              <li><a href="#top">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#projects">Project</a></li>
-            </ul>
           </div>
         </div>
       </header>
@@ -48,7 +55,7 @@
               </div>
             </div>
             <div id="adress">
-              <span>Contact</span>
+              <span id="contact">Contact Me</span>
               <span> | </span>
               <a href="tel:01056243362"
                 ><span
