@@ -221,7 +221,9 @@
     grid-column: 1;
     grid-row: 5;
   }
-
+  #projects .content__title {
+    margin: 5rem 0;
+  }
   .projects__contents-box {
     flex-direction: column;
     height: 800px;
