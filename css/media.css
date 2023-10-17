@@ -272,7 +272,7 @@
   }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 420px) {
   .home__text h1 {
     width: 150%;
     font-size: 50px;
