@@ -271,3 +271,31 @@
     transform: translateY(0px);
   }
 }
+
+@media screen and (max-width: 390px) {
+  .home__text h1 {
+    width: 150%;
+    font-size: 50px;
+  }
+  .home__text-link {
+    width: 120%;
+  }
+
+  .about__keywords {
+    transform: scale(0.7);
+  }
+  .projects__contents-img {
+    height: 40%;
+  }
+
+  .projects__contents-box {
+    height: 800px;
+    justify-content: space-around;
+  }
+  .projects__contents-text p {
+    font-size: 15px;
+  }
+  .projects__contents-text {
+    height: fit-content;
+  }
+}
