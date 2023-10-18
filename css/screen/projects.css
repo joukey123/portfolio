@@ -4,11 +4,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: baseline;
-  margin-bottom: 5rem;
+  margin-bottom: 90px;
 }
 
 #projects .content__title {
-  margin: 10rem 0 5rem 0;
+  margin: 160px 0 90px 0;
 }
 .projects__contents {
   display: flex;
@@ -24,22 +24,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 2rem;
+  padding: 8px 32px;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-  margin-bottom: 5rem;
+  margin-bottom: 90px;
 }
 .projects__contents-box:nth-child(even) {
   .projects__contents-img {
     order: 2;
     margin-right: 0;
-    margin-left: 4rem;
+    margin-left: 64px;
   }
 }
 .projects__contents-img {
   width: 60%;
   height: 400px;
   border-radius: 20px;
-  margin-right: 4rem;
+  margin-right: 64px;
   overflow: hidden;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
   cursor: pointer;
@@ -54,16 +54,16 @@
 }
 .projects__contents-text h1 {
   font-size: 22px;
-  margin-bottom: 1rem;
+  margin-bottom: 16px;
 }
 .project-device span i {
   font-size: 20px;
-  margin: 1rem;
+  margin: 16px;
   color: var(--p-color);
 }
 .projects__contents-text p {
   font-size: 16px;
-  line-height: 1.5rem;
+  line-height: 24px;
   font-weight: lighter;
 }
 
@@ -73,8 +73,8 @@
   justify-content: center;
 }
 .project-skill ul li {
-  margin: 2rem 0.5rem 1rem 0.5rem;
-  padding: 0.8rem;
+  margin: 32px 9px 16px 9px;
+  padding: 13px;
   color: var(--white);
   font-size: 15px;
   border-radius: 5px;
@@ -92,10 +92,10 @@
   justify-content: center;
 }
 .project-link a {
-  margin: 1rem;
-  padding: 0.5rem 1rem;
+  margin: 16px;
+  padding: 9px 16px;
   font-size: 20px;
 }
 .project-link a span {
-  margin-right: 0.5rem;
+  margin-right: 9px;
 }

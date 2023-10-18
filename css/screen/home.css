@@ -3,7 +3,7 @@
   width: 100%;
   align-items: center;
   justify-content: center;
-  padding: 10rem 0rem 18rem 0;
+  padding: 160px 0rem 288px 0;
 }
 .home__text {
   display: flex;
@@ -19,7 +19,7 @@
 .home__text h1 {
   font-size: 90px;
   font-weight: bold;
-  margin: 2rem 0 5rem 0;
+  margin: 32px 0 90px 0;
 }
 
 .home__text-link {
