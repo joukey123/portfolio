@@ -73,6 +73,8 @@ const drawColor = () => {
 };
 
 const drawLine = () => {
+  // ctx.fillStyle = "rgba(0,0,0,0.2)";
+  // ctx.fillRect(0, 0, 600, 600);
   ctx.lineWidth = "0.6";
   ctx.moveTo(200, 120);
   ctx.lineTo(138, 195);
@@ -111,7 +113,7 @@ const drawLine = () => {
   ctx.lineTo(216, 192);
   //13
   ctx.moveTo(140, 225);
-  ctx.lineTo(184, 327);
+  ctx.lineTo(175, 320);
   ctx.lineTo(168, 420);
   //14
   ctx.moveTo(191, 440);
@@ -126,7 +128,7 @@ const drawLine = () => {
   ctx.moveTo(303, 422);
   ctx.lineTo(370, 380);
   //18
-  ctx.moveTo(422, 348);
+  ctx.moveTo(407, 360);
   ctx.lineTo(485, 275);
   ctx.lineTo(421, 222);
   //19
@@ -138,11 +140,11 @@ const drawLine = () => {
   ctx.lineTo(276, 182);
   //21
   ctx.moveTo(247, 206);
-  ctx.lineTo(184, 327);
+  ctx.lineTo(194, 327);
   ctx.lineTo(270, 404);
   ctx.lineTo(289, 324);
   //22
-  ctx.moveTo(247, 206);
+  ctx.moveTo(247, 200);
   ctx.lineTo(284, 289);
   //23
   ctx.moveTo(273, 195);
@@ -151,10 +153,10 @@ const drawLine = () => {
   ctx.moveTo(315, 290);
   ctx.lineTo(375, 232);
   //25
-  ctx.moveTo(348, 310);
-  ctx.lineTo(399, 351);
+  ctx.moveTo(330, 310);
+  ctx.lineTo(407, 360);
   //26
-  ctx.moveTo(409, 343);
+  ctx.moveTo(407, 360);
   ctx.lineTo(392, 236);
 
   ctx.stroke();
@@ -184,7 +186,7 @@ for (let projectImg of projectImges) {
   img.addEventListener("mouseover", () => {
     const imgHeight = img.height;
 
-    img.style.transition = `transform 8s`;
+    img.style.transition = `transform 12s`;
     img.style.transform = `translateY(${-imgHeight + 400}px)`;
   });
   img.addEventListener("mouseleave", () => {
