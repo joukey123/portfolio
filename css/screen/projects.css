@@ -79,11 +79,11 @@
   font-size: 15px;
   border-radius: 5px;
 }
-.project-skill ul li:first-child {
+.project-skill ul li:nth-child(even) {
   background-color: var(--js-color);
 }
 
-.project-skill ul li:last-child {
+.project-skill ul li:nth-child(odd) {
   background-color: var(--css-color);
 }
 .project-link {
